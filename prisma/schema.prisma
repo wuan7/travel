@@ -1,0 +1,204 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String     @id @default(cuid())
+  name          String?
+  email         String     @unique
+  emailVerified DateTime?
+  imageUrl    String?   // URL ảnh trên Cloudinary
+  imagePublicId String? // Public ID của ảnh để xóa khi cần
+  password      String?
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+  role UserRole @default(USER)
+  accounts      Account[]
+  sessions      Session[]
+  bookings      Booking[]
+  reviews       Review[]
+  articles      Article[]
+  
+  @@map("users")
+}
+enum UserRole {
+  ADMIN
+  USER
+}
+
+model Account {
+  id                 String  @id @default(cuid())
+  userId             String  @map("user_id")
+  type               String
+  provider           String
+  providerAccountId  String  @map("provider_account_id")
+  refresh_token      String? @db.Text
+  access_token       String? @db.Text
+  expires_at         Int?
+  token_type         String?
+  scope              String?
+  id_token           String? @db.Text
+  session_state      String?
+ 
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+ 
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique @map("session_token")
+  userId       String   @map("user_id")
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+ 
+  @@map("sessions")
+}
+
+model VerificationToken {
+  identifier String
+  token      String
+  expires    DateTime
+ 
+  @@unique([identifier, token])
+  @@map("verification_tokens")
+}
+
+model Continent {
+  id        String     @id @default(uuid())
+  name      String
+  countries Country[]  // Một châu lục có nhiều quốc gia
+  articles  Article[]
+}
+
+model Country {
+  id          String        @id @default(uuid())
+  name        String
+  continentId String
+  imageUrl   String
+  imagePublicId String 
+  description String
+  continent   Continent     @relation(fields: [continentId], references: [id], onDelete: Cascade)
+  destinations Destination[] // Một quốc gia có nhiều điểm đến
+  categories  Category[]  @relation("CountryCategories")
+}
+model Category {
+  id          String        @id @default(uuid())
+  name        String
+  countries Country[]  @relation("CountryCategories")
+}
+model Destination {
+  id         String   @id @default(uuid())
+  name       String
+  imageUrl   String
+  imagePublicId String 
+  description String
+  countryId  String
+  country    Country  @relation(fields: [countryId], references: [id], onDelete: Cascade)
+  tours      Tour[]   // Một điểm đến có nhiều tour
+}
+
+
+
+model Tour {
+  id           String      @id @default(uuid())
+  name         String
+  description  String
+  price        Float
+  discount     Float?
+  duration     Int         // Số ngày của tour
+  departure    String      // Địa điểm khởi hành
+  startDate    DateTime
+  endDate      DateTime
+  imageUrl    String   // URL ảnh trên Cloudinary
+  imagePublicId String // Public ID của ảnh để xóa khi cần
+  destinationId String
+  capacity      Int      // Số người tối đa có thể tham gia tour (ví dụ 30 người)
+  bookedSlots   Int      @default(0) // Số vé đã được đặt
+  countryId    String
+  isDeleted Boolean @default(false)
+  destination  Destination @relation(fields: [destinationId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt      DateTime    @updatedAt
+  schedules   Schedule[]
+  bookings    Booking[]
+  reviews     Review[]
+}
+
+model Schedule {
+  id       String  @id @default(uuid())
+  tourId   String
+  tour     Tour    @relation(fields: [tourId], references: [id], onDelete: Cascade)
+  day      Int
+  title    String
+  activity String
+}
+
+model Booking {
+  id       String  @id @default(uuid())
+  userId   String
+  user     User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tourId   String
+  tour     Tour    @relation(fields: [tourId], references: [id], onDelete: Cascade)
+  status   BookingStatus
+  quantity  Int      @default(1)
+  price    Float
+  bookedAt DateTime @default(now())
+
+  payment  Payment?
+}
+
+enum BookingStatus {
+  confirmed
+  pending
+}
+
+enum PaymentStatus {
+  success
+  failed
+}
+
+model Payment {
+  id        String  @id @default(uuid())
+  bookingId String  @unique
+  booking   Booking @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+  amount    Float
+  method    String
+  status    PaymentStatus
+  createdAt DateTime @default(now())
+}
+
+model Review {
+  id       String  @id @default(uuid())
+  userId   String
+  user     User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tourId   String
+  tour     Tour    @relation(fields: [tourId], references: [id], onDelete: Cascade)
+  rating   Int
+  comment  String
+  imageUrl    String?
+  imagePublicId String?
+  createdAt DateTime @default(now())
+}
+
+model Article {
+  id            String   @id @default(uuid())
+  title         String
+  content       String   // Nội dung bài viết (HTML hoặc Markdown)
+  slug          String   @unique
+  userId        String
+  user     User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  imageUrl      String?
+  imagePublicId String?
+  readingTime   Int      // Thời gian đọc tính bằng phút
+  continent     Continent @relation(fields: [continentId], references: [id])
+  continentId   String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}

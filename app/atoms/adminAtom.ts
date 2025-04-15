@@ -1,0 +1,10 @@
+import { atom } from "jotai";
+export const createRegion = atom<boolean>(false);
+export const createContinent = atom<boolean>(false);
+export const createCountry = atom<boolean>(false);
+export const createDestination = atom<boolean>(false);
+export const createCategory = atom<boolean>(false);
+export const createTour = atom<boolean>(false);
+export const createSchedule = atom<boolean>(false);
+export const createBooking = atom<boolean>(false);
+export const createPost = atom<boolean>(false);
