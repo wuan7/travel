@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏝️ TravelTour - Website Bán Tour Du Lịch
 
-## Getting Started
+TravelTour là một nền tảng đặt tour du lịch trực tuyến, nơi người dùng có thể dễ dàng tìm kiếm, đặt tour và thanh toán trực tuyến. Dành cho những ai yêu thích du lịch và muốn có trải nghiệm đặt tour nhanh chóng, tiện lợi.
 
-First, run the development server:
+## 🚀 Công nghệ sử dụng
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js** – Framework React mạnh mẽ cho ứng dụng web hiện đại.
+- **NextAuth** – Xác thực người dùng (Google login, email/password,...).
+- **Tailwind CSS** – Thiết kế giao diện nhanh, responsive.
+- **Shadcn/ui** – Bộ component UI hiện đại, dễ tùy biến.
+- **Prisma** – ORM kết nối và thao tác dữ liệu với cơ sở dữ liệu dễ dàng.
+- **VNPAY** – Tích hợp cổng thanh toán online.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧩 Tính năng chính
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 👤 Người dùng
+- Đăng ký / Đăng nhập.
+- Xem danh sách tour du lịch.
+- Xem danh sách điểm đến.
+- Xem chi tiết tour.
+- Đặt tour và thanh toán qua VNPAY.
+- Quản lý các tour đã đặt.
+- Cập nhật thông tin cá nhân.
+- Bình luận
+- Tìm kiếm Tour
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🛠️ Quản trị viên
+- Đăng nhập quản trị.
+- Quản lý tour du lịch
+- Quản lý người dùng.
+- Quản lý đơn đặt tour.
+- ...
 
-## Learn More
+## 💳 Tích hợp thanh toán
+- Hỗ trợ thanh toán trực tuyến qua **VNPAY**.
+- Tài khoản Test thanh toán:Ngân hàng NCB  Số thẻ: 9704198526191432198; Tên chủ thẻ: NGUYEN VAN A; Ngày phát hành: 07/15; Mật khẩu OTP: 123456
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
