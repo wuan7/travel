@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import qs from 'qs';
 import crypto from 'crypto';
-import { prisma } from '@/lib/prisma';
-import { VNPAY_CONFIG } from '@/config/vnpay';
+import { prisma } from '../../../../lib/prisma';
+import { VNPAY_CONFIG } from '../../../../config/vnpay';
 
 const sortObject = (obj: Record<string, string>): Record<string, string> => {
   return Object.keys(obj)

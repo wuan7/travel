@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import { prisma } from "../../../lib/prisma";
 import { NextResponse } from "next/server";
 import slugify from "slugify";
 import readingTime from "reading-time";
