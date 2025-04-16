@@ -38,7 +38,7 @@ const CustomTableCell = TableCell.extend({
 });
 
 
-
+type Level = 1 | 2 | 3 | 4 | 5 | 6;
 const MenuBar = ({ editor }: { editor?: ReturnType<typeof useEditor> }) => {
   if (!editor) return null;
 
@@ -184,7 +184,7 @@ const MenuBar = ({ editor }: { editor?: ReturnType<typeof useEditor> }) => {
           <button
             key={level}
             onClick={() =>
-              editor.chain().focus().toggleHeading({ level }).run()
+              editor.chain().focus().toggleHeading({ level : level as Level }).run()
             }
             className={`btn ${
               editor.isActive("heading", { level }) ? "bg-gray-300" : ""

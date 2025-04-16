@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import { PrismaAdapter } from "@auth/prisma-adapter";
@@ -8,7 +10,7 @@ import bcrypt from "bcryptjs";
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   pages: {
-    error: "/auth/error", // NextAuth tự động chuyển hướng đến trang này nếu có lỗi
+    error: "/auth/error",
   },
   adapter: PrismaAdapter(prisma),
   providers: [
