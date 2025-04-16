@@ -2,7 +2,7 @@
 import { useState } from "react";
 import TiptapEditor from "@/components/editor/TiptapEditor";
 import CreatePost from "@/components/CreatePost";
-import { useAdminModal } from "@/app/hooks/useAdminModal";
+import { useAdminModal } from "@/hooks/useAdminModal";
 
 const Editor = () => {
   const { openCreatePost } = useAdminModal();

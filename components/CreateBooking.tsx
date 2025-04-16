@@ -21,7 +21,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { useAdminModal } from "@/app/hooks/useAdminModal";
+import { useAdminModal } from "@/hooks/useAdminModal";
 import { useSession } from 'next-auth/react';
 interface CreateBookingProps {
   price: number;     // đơn giá

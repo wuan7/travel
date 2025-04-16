@@ -20,7 +20,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { useAdminModal } from "@/app/hooks/useAdminModal";
+import { useAdminModal } from "@/hooks/useAdminModal";
 
 const CategorySchema = z.object({
   name: z.string().min(1, "Tên category không được để trống"),

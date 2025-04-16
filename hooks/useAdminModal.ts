@@ -10,7 +10,7 @@ import {
   createSchedule,
   createBooking,
   createPost
-} from "../atoms/adminAtom";
+} from "../app/atoms/adminAtom";
 
 export const useAdminModal = () => {
   const [isOpenCreateRegion, setOpenCreateRegion] = useAtom(createRegion);

@@ -19,7 +19,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
-import { useAdminModal } from "@/app/hooks/useAdminModal";
+import { useAdminModal } from "@/hooks/useAdminModal";
 import { Tour } from "@prisma/client";
 import { getTours } from "@/app/actions/tour";
 import {

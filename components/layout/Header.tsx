@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { useAuthModal } from "@/app/hooks/useAuthModal";
+import { useAuthModal } from "@/hooks/useAuthModal";
 import { Button } from "../ui/button";
 import { User } from "lucide-react";
 import { useSession } from "next-auth/react";

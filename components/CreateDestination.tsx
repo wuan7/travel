@@ -22,7 +22,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { useAdminModal } from "@/app/hooks/useAdminModal";
+import { useAdminModal } from "@/hooks/useAdminModal";
 import { Country } from "@prisma/client";
 import ImageUpload from "./ImageUpload";
 import {

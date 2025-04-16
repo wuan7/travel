@@ -1,6 +1,6 @@
 "use client";
 import { useAtom } from "jotai";
-import { authModalAtom } from "../atoms/authAtom"; 
+import { authModalAtom } from "../app/atoms/authAtom"; 
 
 export const useAuthModal = () => {
     const [authModal, setAuthModal] = useAtom(authModalAtom);

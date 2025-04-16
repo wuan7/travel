@@ -17,7 +17,7 @@ import TourCarousel from "@/components/TourCarousel";
 import { Button } from "@/components/ui/button";
 import { useSession } from 'next-auth/react';
 import { toast } from "sonner";
-import { useAdminModal } from "@/app/hooks/useAdminModal";
+import { useAdminModal } from "@/hooks/useAdminModal";
 import CreateBooking from "@/components/CreateBooking";
 import Review from "@/components/Review";
 const TourSection = () => {

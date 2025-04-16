@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useAdminModal } from "@/app/hooks/useAdminModal";
+import { useAdminModal } from "@/hooks/useAdminModal";
 import { Button } from "@/components/ui/button";
 
 const Manage = () => {
