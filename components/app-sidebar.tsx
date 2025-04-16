@@ -26,17 +26,17 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar";
+} from "../components/ui/sidebar";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "../components/ui/dropdown-menu";
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
-import { useSidebar, SidebarTrigger } from "@/components/ui/sidebar";
+import { useSidebar, SidebarTrigger } from "../components/ui/sidebar";
 // Menu items.
 const items = [
   {

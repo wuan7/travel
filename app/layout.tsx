@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Modals from "@/components/Modals";
-import { JotaiProvider } from "@/components/JotaiProvider";
+import Modals from "../components/Modals";
+import { JotaiProvider } from "../components/JotaiProvider";
 import { SessionProvider } from "next-auth/react";
-import { Toaster } from "@/components/ui/sonner"
-import HeaderWrapper from "@/components/layout/HeaderWrapper";
-import FooterWrapper from "@/components/layout/FooterWrapper";
+import { Toaster } from "../components/ui/sonner"
+import HeaderWrapper from "../components/layout/HeaderWrapper";
+import FooterWrapper from "../components/layout/FooterWrapper";
 
 
 export const metadata: Metadata = {

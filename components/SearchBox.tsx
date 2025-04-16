@@ -2,14 +2,14 @@
 
 import { useState, useEffect, useRef } from "react";
 import { Search } from "lucide-react";
-import { Input } from "@/components/ui/input";
+import { Input } from "../components/ui/input";
 import { debounce } from "lodash";
 import {
   Command,
   CommandGroup,
   CommandItem,
   CommandList,
-} from "@/components/ui/command";
+} from "../components/ui/command";
 import Link from "next/link";
 
 type TourResult = {

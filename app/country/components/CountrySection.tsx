@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { Country } from "@prisma/client";
-import { getCountry } from "@/app/actions/country";
-import TourCarousel from "@/components/TourCarousel";
+import { getCountry } from "../../../app/actions/country";
+import TourCarousel from "../../../components/TourCarousel";
 import Image from "next/image";
 import { Loader } from "lucide-react";
 const CountrySection = () => {

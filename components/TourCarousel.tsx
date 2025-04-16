@@ -1,11 +1,11 @@
 import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { getTours, getToursById } from "@/app/actions/tour";
+import { getTours, getToursById } from "../app/actions/tour";
 import Link from "next/link";
 import Image from "next/image";
-import { Skeleton } from "@/components/ui/skeleton";
-import { TourWithDestination } from "@/types";
+import { Skeleton } from "../components/ui/skeleton";
+import { TourWithDestination } from "../types";
 
 interface TourCarouselProps {
   id?: string;

@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { getContinents } from "@/app/actions/continent";
-import { ContinentWithPosts } from "@/types";
+import { getContinents } from "../app/actions/continent";
+import { ContinentWithPosts } from "../types";
 import PostTabCarousel from "./PostTab";
 const InspiringReads = () => {
   const [isLoading, setIsLoading] = useState(false);

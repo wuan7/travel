@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { getCategories } from "@/app/actions/category";
+import { getCategories } from "../app/actions/category";
 import TestTabCarouse from "./TestTabCarouse";
-import { CategoryWithCountries } from "@/types";
+import { CategoryWithCountries } from "../types";
 const ExploreDestinations = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [categories, setCategories] = useState<CategoryWithCountries[]>([]);

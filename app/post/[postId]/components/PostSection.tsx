@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { getPostById } from "@/app/actions/post";
-import { ArticleWithUser } from "@/types";
-import { Skeleton } from "@/components/ui/skeleton";
+import { getPostById } from "../../../../app/actions/post";
+import { ArticleWithUser } from "../../../../types";
+import { Skeleton } from "../../../../components/ui/skeleton";
 import { useParams } from "next/navigation";
 
 const PostSection = () => {

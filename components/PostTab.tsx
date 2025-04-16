@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "../components/ui/tabs";
 import PostCarousel from "./PostCarousel";
-import { ContinentWithPosts } from "@/types";
+import { ContinentWithPosts } from "../types";
 import { Article } from "@prisma/client";
 
 interface TabbedCarouselProps {

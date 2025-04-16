@@ -4,7 +4,7 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog";
+} from "../components/ui/dialog";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -15,20 +15,20 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+} from "../components/ui/form";
+import { Input } from "../components/ui/input";
+import { Button } from "../components/ui/button";
 import { toast } from "sonner";
-import { useAdminModal } from "@/hooks/useAdminModal";
+import { useAdminModal } from "../hooks/useAdminModal";
 import { Tour } from "@prisma/client";
-import { getTours } from "@/app/actions/tour";
+import { getTours } from "../app/actions/tour";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "../components/ui/select";
 const ScheduleSchema = z.object({
   title: z.string().min(1, "Tiêu đề không được để trống"),
   day: z.string().min(1, "Ngày nhập phải nhiều hơn 1 ký tự"),

@@ -6,7 +6,7 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog";
+} from "../components/ui/dialog";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -17,14 +17,14 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+} from "../components/ui/form";
+import { Input } from "../components/ui/input";
+import { Button } from "../components/ui/button";
 import { toast } from "sonner";
-import { useAdminModal } from "@/hooks/useAdminModal";
-import { Textarea } from "@/components/ui/textarea";
-import { DatePicker } from "@/components/ui/date-picker";
-import { getDestination } from "@/app/actions/destination";
+import { useAdminModal } from "../hooks/useAdminModal";
+import { Textarea } from "../components/ui/textarea";
+import { DatePicker } from "../components/ui/date-picker";
+import { getDestination } from "../app/actions/destination";
 import { Destination, Country } from "@prisma/client";
 import ImageUpload from "./ImageUpload";
 import {
@@ -33,8 +33,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { getCountries } from "@/app/actions/country";
+} from "../components/ui/select";
+import { getCountries } from "../app/actions/country";
 // Schema validation với Zod
 const TourSchema = z.object({
   name: z.string().min(1, "Tên tour không được để trống"),

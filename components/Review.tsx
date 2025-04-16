@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { getReviewCheck, getReviewsByTourId } from "@/app/actions/review";
-import { ReviewWithUserAndTour } from "@/types";
+import { getReviewCheck, getReviewsByTourId } from "../app/actions/review";
+import { ReviewWithUserAndTour } from "../types";
 import { Star } from "lucide-react";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Textarea } from "../components/ui/textarea";
+import { Button } from "../components/ui/button";
+import { Card, CardContent } from "../components/ui/card";
+import { Avatar, AvatarImage, AvatarFallback } from "../components/ui/avatar";
 import Image from "next/image";
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "../components/ui/separator";
 import { toast } from "sonner";
 import ImageUpload from "./ImageUpload";
 interface ReviewProps {

@@ -8,9 +8,9 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {/* Cột 1: Giới thiệu */}
           <div>
-            <h2 className="font-bold text-lg mb-3 text-white">Về Traveloka</h2>
+            <h2 className="font-bold text-lg mb-3 text-white">Về Travel</h2>
             <p className="text-sm ">
-              Traveloka là nền tảng du lịch hàng đầu giúp bạn đặt vé máy bay, khách sạn và các dịch vụ khác một cách dễ dàng.
+              Travel là nền tảng du lịch hàng đầu giúp bạn đặt tour, đặt vé máy bay, khách sạn và các dịch vụ khác một cách dễ dàng.
             </p>
           </div>
 
@@ -18,10 +18,10 @@ const Footer = () => {
           <div>
             <h2 className="font-bold text-lg mb-3 text-white">Liên kết</h2>
             <ul className="space-y-2">
-              <li><Link href="/about" className="hover:text-primary">Về chúng tôi</Link></li>
-              <li><Link href="/contact" className="hover:text-primary">Liên hệ</Link></li>
-              <li><Link href="/terms" className="hover:text-primary">Điều khoản</Link></li>
-              <li><Link href="/privacy" className="hover:text-primary">Chính sách bảo mật</Link></li>
+              <li><Link href="#" className="hover:text-primary">Về chúng tôi</Link></li>
+              <li><Link href="#" className="hover:text-primary">Liên hệ</Link></li>
+              <li><Link href="#" className="hover:text-primary">Điều khoản</Link></li>
+              <li><Link href="#" className="hover:text-primary">Chính sách bảo mật</Link></li>
             </ul>
           </div>
 
@@ -29,9 +29,9 @@ const Footer = () => {
           <div>
             <h2 className="font-bold text-lg mb-3 text-white">Hỗ trợ</h2>
             <ul className="space-y-2">
-              <li><Link href="/faq" className="hover:text-primary">Câu hỏi thường gặp</Link></li>
-              <li><Link href="/support" className="hover:text-primary">Trung tâm hỗ trợ</Link></li>
-              <li><Link href="/refund" className="hover:text-primary">Chính sách hoàn tiền</Link></li>
+              <li><Link href="#" className="hover:text-primary">Câu hỏi thường gặp</Link></li>
+              <li><Link href="#" className="hover:text-primary">Trung tâm hỗ trợ</Link></li>
+              <li><Link href="#" className="hover:text-primary">Chính sách hoàn tiền</Link></li>
             </ul>
           </div>
 

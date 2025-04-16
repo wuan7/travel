@@ -5,7 +5,7 @@ import { getUserById } from "../actions/user";
 import { TriangleAlert, Eye, EyeOff } from "lucide-react";
 import Image from "next/image";
 import { toast } from "sonner";
-import ImageUpload from "@/components/ImageUpload";
+import ImageUpload from "../../components/ImageUpload";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -18,9 +18,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+} from "../../components/ui/form";
+import { Input } from "../../components/ui/input";
+import { Button } from "../../components/ui/button";
 import { UserWithAccount } from "../../types";
 
 const profileSchema = z.object({

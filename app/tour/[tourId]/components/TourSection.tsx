@@ -2,24 +2,24 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import StickyBox from "react-sticky-box";
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "../../../../components/ui/separator";
 import { useParams } from "next/navigation";
-import { getTourById } from "@/app/actions/tour";
-import { Skeleton } from "@/components/ui/skeleton";
-import { TourWithSchedules } from "@/types";
+import { getTourById } from "../../../../app/actions/tour";
+import { Skeleton } from "../../../../components/ui/skeleton";
+import { TourWithSchedules } from "../../../../types";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import TourCarousel from "@/components/TourCarousel";
-import { Button } from "@/components/ui/button";
+} from "../../../../components/ui/accordion";
+import TourCarousel from "../../../../components/TourCarousel";
+import { Button } from "../../../../components/ui/button";
 import { useSession } from 'next-auth/react';
 import { toast } from "sonner";
-import { useAdminModal } from "@/hooks/useAdminModal";
-import CreateBooking from "@/components/CreateBooking";
-import Review from "@/components/Review";
+import { useAdminModal } from "../../../../hooks/useAdminModal";
+import CreateBooking from "../../../../components/CreateBooking";
+import Review from "../../../../components/Review";
 const TourSection = () => {
   const session = useSession();
   const { tourId } = useParams();

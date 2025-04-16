@@ -1,4 +1,4 @@
-import { getDestinationById } from "@/app/actions/destination";
+import { getDestinationById } from "../app/actions/destination";
 import { Destination } from "@prisma/client";
 import React, { useEffect, useState } from "react";
 

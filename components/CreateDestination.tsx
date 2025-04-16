@@ -4,8 +4,8 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from "../components/ui/button";
+import { Input } from "../components/ui/input";
 import {
   Form,
   FormControl,
@@ -13,16 +13,16 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Textarea } from "@/components/ui/textarea";
+} from "../components/ui/form";
+import { Textarea } from "../components/ui/textarea";
 import { toast } from "sonner";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog";
-import { useAdminModal } from "@/hooks/useAdminModal";
+} from "../components/ui/dialog";
+import { useAdminModal } from "../hooks/useAdminModal";
 import { Country } from "@prisma/client";
 import ImageUpload from "./ImageUpload";
 import {
@@ -31,8 +31,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { getCountries } from "@/app/actions/country";
+} from "../components/ui/select";
+import { getCountries } from "../app/actions/country";
 export const DestinationSchema = z.object({
   name: z.string().min(1, "Tên điểm đến không được để trống"),
   description: z.string().min(10, "Mô tả phải có ít nhất 10 ký tự"),

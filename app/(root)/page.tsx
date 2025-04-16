@@ -1,8 +1,8 @@
-import ExploreDestinations from "@/components/ExploreDestinations";
-import ExploreTours from "@/components/ExploreTours";
-import HeroSection from "@/components/HeroSection";
-import InspiringReads from "@/components/InspiringReads";
-import TravelDestinations from "@/components/TravelDestinations";
+import ExploreDestinations from "../../components/ExploreDestinations";
+import ExploreTours from "../../components/ExploreTours";
+import HeroSection from "../../components/HeroSection";
+import InspiringReads from "../../components/InspiringReads";
+import TravelDestinations from "../../components/TravelDestinations";
 export default function Home() {
   return (
     <div className="p-3 md:p-0 overflow-x-hidden">

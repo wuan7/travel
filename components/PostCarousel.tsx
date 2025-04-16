@@ -3,7 +3,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
-import { ArticleWithUser } from "@/types";
+import { ArticleWithUser } from "../types";
 import Link from "next/link";
 import { Skeleton } from "./ui/skeleton";
 

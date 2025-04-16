@@ -4,7 +4,7 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from "@/components/ui/dialog";
+} from "../components/ui/dialog";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -15,11 +15,11 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+} from "../components/ui/form";
+import { Input } from "../components/ui/input";
+import { Button } from "../components/ui/button";
 import { toast } from "sonner";
-import { useAdminModal } from "@/hooks/useAdminModal";
+import { useAdminModal } from "../hooks/useAdminModal";
 import ImageUpload from "./ImageUpload";
 import {
   Select,
@@ -27,8 +27,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { getContinents } from "@/app/actions/continent";
+} from "../components/ui/select";
+import { getContinents } from "../app/actions/continent";
 import { Continent } from "@prisma/client";
 import { useSession } from 'next-auth/react';
 

@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "../components/ui/tabs";
 import { Category, Continent } from "@prisma/client";
 import TestCarousel from "./TestCarousel";
-import { CategoryWithCountries, ContinentWithCountries } from "@/types";
+import { CategoryWithCountries, ContinentWithCountries } from "../types";
 interface TestTabCarouseProps {
   type?: string;
   continentTabs?: ContinentWithCountries[];
