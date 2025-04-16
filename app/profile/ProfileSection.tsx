@@ -21,7 +21,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { UserWithAccount } from "../types";
+import { UserWithAccount } from "../../types";
 
 const profileSchema = z.object({
   name: z.string().min(1, "Vui lòng nhập họ tên"),

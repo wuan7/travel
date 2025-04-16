@@ -5,7 +5,7 @@ import { getTours, getToursById } from "@/app/actions/tour";
 import Link from "next/link";
 import Image from "next/image";
 import { Skeleton } from "@/components/ui/skeleton";
-import { TourWithDestination } from "@/app/types";
+import { TourWithDestination } from "@/types";
 
 interface TourCarouselProps {
   id?: string;

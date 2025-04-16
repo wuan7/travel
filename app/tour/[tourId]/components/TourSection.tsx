@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import { useParams } from "next/navigation";
 import { getTourById } from "@/app/actions/tour";
 import { Skeleton } from "@/components/ui/skeleton";
-import { TourWithSchedules } from "@/app/types";
+import { TourWithSchedules } from "@/types";
 import {
   Accordion,
   AccordionContent,

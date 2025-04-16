@@ -22,27 +22,27 @@
     "paths": {
       "@/*": ["./*"],
       "@/components/*": [
-        "components/*"
+        "/components/*"
       ],
       "@/lib/*": [
-        "lib/*"
+        "/lib/*"
       ],
       "@/styles/*": [
-        "styles/*"
+        "/styles/*"
       ],
       "@/types/*": [
-        "types/*"
+        "/types/*"
       ],
       "@/utils/*": [
-        "utils/*"
+        "/utils/*"
       ],
       "@/hooks/*": [
-        "hooks/*"
+        "/hooks/*"
       ],
       "@/constants/*": [
-        "constants/*"
+        "/constants/*"
       ],
-      
+
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

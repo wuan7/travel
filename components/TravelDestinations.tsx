@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import TestTabCarouse from "./TestTabCarouse";
 import { getContinents } from "@/app/actions/continent";
-import { ContinentWithCountries } from "@/app/types";
+import { ContinentWithCountries } from "@/types";
 
 
 const TravelDestinations = () => {

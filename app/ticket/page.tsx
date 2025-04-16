@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { BookingWithTour } from "../types";
+import { BookingWithTour } from "../../types";
 import { getBookingByUserId } from "../actions/booking";
 import { useSession } from "next-auth/react";
 import Image from "next/image";

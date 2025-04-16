@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getReviewCheck, getReviewsByTourId } from "@/app/actions/review";
-import { ReviewWithUserAndTour } from "@/app/types";
+import { ReviewWithUserAndTour } from "@/types";
 import { Star } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";

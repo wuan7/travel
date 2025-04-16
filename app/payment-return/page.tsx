@@ -5,7 +5,7 @@ import {  useLayoutEffect, useState } from "react";
 import confetti from "canvas-confetti";
 import { useSearchParams, useRouter } from "next/navigation";
 import { CheckCircle, Loader, XCircle } from "lucide-react";
-import { BookingWithTour } from "../types";
+import { BookingWithTour } from "../../types";
 import { getBookingById } from "../actions/booking";
 
 const PaymentReturnPage = () => {
