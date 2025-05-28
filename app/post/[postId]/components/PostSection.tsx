@@ -66,7 +66,7 @@ const PostSection = () => {
       </div>
 
       <article
-        className="prose prose-sm md:prose-base lg:prose-lg max-w-none text-gray-800"
+        className="content-html leading-relaxed"
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
     </div>
